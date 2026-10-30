@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cec3gx0unxhho"]
+
+[ext_resource type="Texture2D" uid="uid://3hpwxup7y3j0" path="res://background menu test 2.jpg" id="1_x2hje"]
+
+[node name="Node2D" type="Node2D" unique_id=1276793301]
+
+[node name="BackgroundMenuTest2" type="Sprite2D" parent="." unique_id=86834769]
+position = Vector2(956, 543)
+scale = Vector2(2.6722221, 2.3991134)
+texture = ExtResource("1_x2hje")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=67200634]
+offset_left = 956.0
+offset_top = 543.0
+offset_right = 996.0
+offset_bottom = 583.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1673235368]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Label" unique_id=1165128354]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
