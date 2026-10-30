@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bnee1kbqtbspa"]
+
+[ext_resource type="Script" uid="uid://c1bb0qn3kvtdk" path="res://Player/player.gd" id="1_l8h54"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4kxuq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kxuq"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=703678403]
+script = ExtResource("1_l8h54")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2069348243]
+shape = SubResource("CapsuleShape2D_4kxuq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1522616536]
+sprite_frames = SubResource("SpriteFrames_4kxuq")
+animation = &"Run"
