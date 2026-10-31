@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dhv6kha7dfadn"]
+
+[ext_resource type="Texture2D" uid="uid://2omomc75x8cy" path="res://gostinnaia.jpg" id="1_slbsb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drsw1"]
+size = Vector2(95.5, 1113.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3owqy"]
+size = Vector2(1945, 174)
+
+[node name="Node2D" type="Node2D" unique_id=15726530]
+
+[node name="Gostinnaia" type="Sprite2D" parent="." unique_id=4620660]
+position = Vector2(962.4999, 541)
+scale = Vector2(2.6236413, 2.6231887)
+texture = ExtResource("1_slbsb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=129956682]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=563283758]
+position = Vector2(1956.75, 550.75)
+shape = SubResource("RectangleShape2D_drsw1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=273671520]
+position = Vector2(-43, 555)
+shape = SubResource("RectangleShape2D_drsw1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=151458521]
+position = Vector2(964, 1042)
+shape = SubResource("RectangleShape2D_3owqy")

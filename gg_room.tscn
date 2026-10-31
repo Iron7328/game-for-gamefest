@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://u0iobnhtqd3x"]
+
+[ext_resource type="Texture2D" uid="uid://ceujk5n6kekln" path="res://gg room2.jpg" id="1_dacfs"]
+[ext_resource type="PackedScene" uid="uid://bnee1kbqtbspa" path="res://Player/player.tscn" id="2_ap6bo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3owqy"]
+size = Vector2(1910, 194)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8upip"]
+size = Vector2(124, 1134)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drsw1"]
+size = Vector2(20, 935)
+
+[node name="Node2D" type="Node2D" unique_id=262829280]
+
+[node name="GgRoom2" type="Sprite2D" parent="." unique_id=1695728330]
+position = Vector2(959.99994, 549.5)
+scale = Vector2(2.5986395, 2.5162039)
+texture = ExtResource("1_dacfs")
+
+[node name="CharacterBody2D" parent="GgRoom2" unique_id=703678403 instance=ExtResource("2_ap6bo")]
+position = Vector2(-140.84291, 11.724014)
+scale = Vector2(0.38481677, 0.3974241)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2043683274]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1904417524]
+position = Vector2(956, 994)
+shape = SubResource("RectangleShape2D_3owqy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=745002990]
+position = Vector2(1969, 554)
+shape = SubResource("RectangleShape2D_8upip")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1159265747]
+position = Vector2(0, 457.5)
+shape = SubResource("RectangleShape2D_drsw1")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3hpwxup7y3j0"
-path="res://.godot/imported/background menu test 2.jpg-9e58ba2ded32a93b987ad62a2dd46010.ctex"
+uid="uid://db0dlq3fmb8nq"
+path="res://.godot/imported/walk-Sheet.png-d32765ed5b3f3583c6572b17881f3a89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background menu test 2.jpg"
-dest_files=["res://.godot/imported/background menu test 2.jpg-9e58ba2ded32a93b987ad62a2dd46010.ctex"]
+source_file="res://Legacy-Fantasy - High Forest 2.3/Mob/Snail/walk-Sheet.png"
+dest_files=["res://.godot/imported/walk-Sheet.png-d32765ed5b3f3583c6572b17881f3a89.ctex"]
 
 [params]
 

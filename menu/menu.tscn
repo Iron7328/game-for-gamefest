@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dijo802joo7tq"]
 
-[ext_resource type="Texture2D" uid="uid://3hpwxup7y3j0" path="res://background menu test 2.jpg" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://bppj2tt85x2u4" path="res://button_options.gd" id="2_mae5d"]
-[ext_resource type="Script" uid="uid://dbgcci3tved5n" path="res://button_3.gd" id="2_ouk20"]
+[ext_resource type="Texture2D" uid="uid://3hpwxup7y3j0" path="res://menu/background menu test 2.jpg" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://dp6rcttwdvtr2" path="res://menu/button_start.gd" id="2_4hy44"]
+[ext_resource type="Script" uid="uid://bppj2tt85x2u4" path="res://menu/button_options.gd" id="2_mae5d"]
+[ext_resource type="Script" uid="uid://dbgcci3tved5n" path="res://menu/button_3.gd" id="2_ouk20"]
 
 [node name="Node2D" type="Node2D" unique_id=484872256]
 
@@ -20,11 +21,12 @@ offset_right = 1650.0
 offset_bottom = 560.0
 theme_override_constants/separation = 95
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=148943188]
+[node name="Button_start" type="Button" parent="VBoxContainer" unique_id=148943188]
 custom_minimum_size = Vector2(400, 130)
 layout_mode = 2
 theme_override_font_sizes/font_size = 55
 text = "Начать игру"
+script = ExtResource("2_4hy44")
 
 [node name="Button_options" type="Button" parent="VBoxContainer" unique_id=1893390505]
 custom_minimum_size = Vector2(400, 130)
@@ -40,5 +42,6 @@ theme_override_font_sizes/font_size = 55
 text = "Выход"
 script = ExtResource("2_ouk20")
 
+[connection signal="pressed" from="VBoxContainer/Button_start" to="VBoxContainer/Button_start" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_options" to="VBoxContainer/Button_options" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button_exit" to="VBoxContainer/Button_exit" method="_on_pressed"]

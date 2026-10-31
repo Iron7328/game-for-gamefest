@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cec3gx0unxhho"]
 
-[ext_resource type="Texture2D" uid="uid://3hpwxup7y3j0" path="res://background menu test 2.jpg" id="1_x2hje"]
+[ext_resource type="Texture2D" uid="uid://3hpwxup7y3j0" path="res://menu/background menu test 2.jpg" id="1_x2hje"]
 
 [node name="Node2D" type="Node2D" unique_id=1276793301]
 
@@ -9,16 +9,60 @@ position = Vector2(956, 543)
 scale = Vector2(2.6722221, 2.3991134)
 texture = ExtResource("1_x2hje")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=67200634]
-offset_left = 956.0
-offset_top = 543.0
-offset_right = 996.0
-offset_bottom = 583.0
+[node name="Control" type="Control" parent="." unique_id=374879767]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1673235368]
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=63359959]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -5.0
+offset_right = 1923.0
+offset_bottom = 1075.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer" unique_id=67200634]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Control/CenterContainer/VBoxContainer" unique_id=1047883075]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "Настройки"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/CenterContainer/VBoxContainer" unique_id=660846846]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Master_volume" type="Label" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1673235368]
+custom_minimum_size = Vector2(250, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Громкость"
+
+[node name="HSlider" type="HSlider" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1165128354]
+custom_minimum_size = Vector2(700, 70)
 layout_mode = 2
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/Label" unique_id=1165128354]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 16.0
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/CenterContainer/VBoxContainer" unique_id=1810434206]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Music_volume" type="Label" parent="Control/CenterContainer/VBoxContainer/HBoxContainer2" unique_id=690063624]
+custom_minimum_size = Vector2(250, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Музыка"
+
+[node name="HSlider" type="HSlider" parent="Control/CenterContainer/VBoxContainer/HBoxContainer2" unique_id=515885088]
+custom_minimum_size = Vector2(700, 70)
+layout_mode = 2
