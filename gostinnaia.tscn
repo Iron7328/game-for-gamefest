@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://2omomc75x8cy" path="res://gostinnaia.jpg" id="1_slbsb"]
 [ext_resource type="PackedScene" uid="uid://bnee1kbqtbspa" path="res://Player/player.tscn" id="3_060r7"]
 [ext_resource type="PackedScene" uid="uid://bu3iw5hv22ov3" path="res://menu/UI/ui.tscn" id="4_06bbe"]
+[ext_resource type="PackedScene" uid="uid://c3ygocmubs0mk" path="res://NPC/parent_npc.tscn" id="5_1m78b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drsw1"]
 size = Vector2(95.5, 1113.5)
@@ -41,3 +42,6 @@ shape = SubResource("RectangleShape2D_3owqy")
 position = Vector2(102, 887)
 
 [node name="UI" parent="." unique_id=1367850701 instance=ExtResource("4_06bbe")]
+
+[node name="ParentNPC" parent="." unique_id=413028101 instance=ExtResource("5_1m78b")]
+position = Vector2(719, 695)
