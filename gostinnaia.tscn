@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://2omomc75x8cy" path="res://gostinnaia.jpg" id="1_slbsb"]
 [ext_resource type="PackedScene" uid="uid://bnee1kbqtbspa" path="res://Player/player.tscn" id="3_060r7"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8upip"]
+size = Vector2(192, 372)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drsw1"]
 size = Vector2(95.5, 1113.5)
 
@@ -19,6 +22,12 @@ scale = Vector2(2.6236413, 2.6231887)
 texture = ExtResource("1_slbsb")
 
 [node name="CharacterBody2D" parent="." unique_id=703678403 groups=["player"] instance=ExtResource("3_060r7")]
+
+[node name="BackDoorTrigger" type="Area2D" parent="." unique_id=804724278]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackDoorTrigger" unique_id=2137588018]
+position = Vector2(101, 766)
+shape = SubResource("RectangleShape2D_8upip")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=129956682]
 
@@ -38,3 +47,6 @@ shape = SubResource("RectangleShape2D_3owqy")
 
 [node name="DefaultSpawn" type="Marker2D" parent="Spawns" unique_id=176744762]
 position = Vector2(102, 887)
+
+[connection signal="body_entered" from="BackDoorTrigger" to="BackDoorTrigger" method="_on_body_entered"]
+[connection signal="body_exited" from="BackDoorTrigger" to="." method="_on_back_door_trigger_body_exited"]
