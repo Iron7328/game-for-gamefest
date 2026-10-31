@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://c3ug0y3fd7dwk"]
 
-[ext_resource type="Script" uid="uid://bfla1astkgvv3" path="res://menu/UI/dialogue_ui.gd" id="1_i72oy"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kxuq"]
 bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.8)
 corner_radius_top_left = 30
@@ -21,7 +19,6 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="DialogueUI" type="CanvasLayer" unique_id=1599605407]
-script = ExtResource("1_i72oy")
 
 [node name="Control" type="Control" parent="." unique_id=902855351]
 layout_mode = 3

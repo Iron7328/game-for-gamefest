@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uwm7jlydabx0" path="res://gostinnaia.gd" id="1_mpilp"]
 [ext_resource type="Texture2D" uid="uid://2omomc75x8cy" path="res://gostinnaia.jpg" id="1_slbsb"]
 [ext_resource type="PackedScene" uid="uid://bnee1kbqtbspa" path="res://Player/player.tscn" id="3_060r7"]
+[ext_resource type="PackedScene" uid="uid://bu3iw5hv22ov3" path="res://menu/UI/ui.tscn" id="4_06bbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drsw1"]
 size = Vector2(95.5, 1113.5)
@@ -38,3 +39,5 @@ shape = SubResource("RectangleShape2D_3owqy")
 
 [node name="DefaultSpawn" type="Marker2D" parent="Spawns" unique_id=176744762]
 position = Vector2(102, 887)
+
+[node name="UI" parent="." unique_id=1367850701 instance=ExtResource("4_06bbe")]

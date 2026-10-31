@@ -12,7 +12,7 @@ extends CanvasLayer
 @onready var _relationship_bar: TextureProgressBar = %RelationshipBar
 @onready var _dialogue_panel: PanelContainer = %DialoguePanel
 @onready var _speaker_label: Label = %SpeakerLabel
-@onready var _dialogue_text: Label = %DialogueText
+@onready var _dialogue_text: RichTextLabel = %DialogueText
 @onready var _choice_buttons: Array[Button] = [%ChoiceButton1, %ChoiceButton2, %ChoiceButton3]
 @onready var _event_label: Label = %EventLabel
 
@@ -50,7 +50,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	# Обратный отсчёт видимого ивента (включается только пока таймер идёт).
-	var time_left := EventManager.get_time_left(_tracked_event_id)
+	var time_left: float = EventManager.get_time_left(_tracked_event_id)
 	_event_label.text = "%s %d" % [_tracked_event_hint, ceili(time_left)]
 
 

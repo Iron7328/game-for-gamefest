@@ -1,20 +1,37 @@
 [gd_scene format=3 uid="uid://bu3iw5hv22ov3"]
 
+[ext_resource type="Script" uid="uid://dy8evmyepuxyd" path="res://scripts/ui.gd" id="1_k6wxu"]
 [ext_resource type="Texture2D" uid="uid://b6yiivac651aw" path="res://mhp_empty.png" id="1_ymc7s"]
 [ext_resource type="Texture2D" uid="uid://pjpeqrvrdb1i" path="res://mhp_full.png" id="2_7bm44"]
 [ext_resource type="Texture2D" uid="uid://dxno5xyduvcpm" path="res://Ptrust_full.png" id="4_k6wxu"]
+[ext_resource type="PackedScene" uid="uid://c3ug0y3fd7dwk" path="res://menu/UI/dialogue_ui.tscn" id="5_necer"]
 
-[node name="UI" type="Control" unique_id=1367850701]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r3xx"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.8)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v646e"]
+content_margin_left = 15.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h53wi"]
+bg_color = Color(0.2, 0.2, 0.2, 0.5019608)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="UI" type="CanvasLayer" unique_id=1098070495]
+script = ExtResource("1_k6wxu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1450777208]
+unique_name_in_owner = true
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1131466757]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,6 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=820612390]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -35,7 +53,8 @@ grow_vertical = 0
 scale = Vector2(0.3, 0.3)
 theme_override_constants/separation = 120
 
-[node name="MentalHP" type="TextureProgressBar" parent="CanvasLayer/Control/HBoxContainer" unique_id=976315577]
+[node name="MentalHealthBar" type="TextureProgressBar" parent="CanvasLayer/Control/HBoxContainer" unique_id=976315577]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 256)
 layout_mode = 2
 min_value = -100.0
@@ -44,7 +63,7 @@ fill_mode = 3
 texture_under = ExtResource("1_ymc7s")
 texture_progress = ExtResource("2_7bm44")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/HBoxContainer/MentalHP" unique_id=2036891643]
+[node name="Label" type="Label" parent="CanvasLayer/Control/HBoxContainer/MentalHealthBar" unique_id=2036891643]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -56,7 +75,8 @@ theme_override_font_sizes/font_size = 120
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ParentsTrust" type="TextureProgressBar" parent="CanvasLayer/Control/HBoxContainer" unique_id=655720304]
+[node name="RelationshipBar" type="TextureProgressBar" parent="CanvasLayer/Control/HBoxContainer" unique_id=655720304]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 256)
 layout_mode = 2
 min_value = -100.0
@@ -64,7 +84,7 @@ fill_mode = 3
 texture_under = ExtResource("1_ymc7s")
 texture_progress = ExtResource("4_k6wxu")
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/HBoxContainer/ParentsTrust" unique_id=399354444]
+[node name="Label" type="Label" parent="CanvasLayer/Control/HBoxContainer/RelationshipBar" unique_id=399354444]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -75,3 +95,92 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 120
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DialogueUI" parent="." unique_id=1599605407 instance=ExtResource("5_necer")]
+unique_name_in_owner = true
+
+[node name="Control2" type="Control" parent="DialogueUI" unique_id=1430243366]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialoguePanel" type="PanelContainer" parent="DialogueUI/Control2" unique_id=1085245491]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -661.5
+offset_top = 50.0
+offset_right = -45.0
+offset_bottom = 598.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3r3xx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueUI/Control2/DialoguePanel" unique_id=670192479]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="DialogueUI/Control2/DialoguePanel/VBoxContainer" unique_id=1548272196]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueUI/Control2/DialoguePanel/VBoxContainer" unique_id=1659854571]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 24
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="DialogueUI/Control2/DialoguePanel/VBoxContainer" unique_id=931627964]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="ChoiceButton1" type="Button" parent="DialogueUI/Control2/DialoguePanel/VBoxContainer/ChoicesContainer" unique_id=1518863092]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.89411765, 0.8117647, 0.19607843, 1)
+theme_override_constants/h_separation = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_v646e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h53wi")
+text = "test"
+alignment = 0
+
+[node name="ChoiceButton2" type="Button" parent="DialogueUI/Control2/DialoguePanel/VBoxContainer/ChoicesContainer" unique_id=368456929]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.89411765, 0.8117647, 0.19607843, 1)
+theme_override_constants/h_separation = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_v646e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h53wi")
+alignment = 0
+
+[node name="ChoiceButton3" type="Button" parent="DialogueUI/Control2/DialoguePanel/VBoxContainer/ChoicesContainer" unique_id=592337871]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.89411765, 0.8117647, 0.19607843, 1)
+theme_override_constants/h_separation = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_v646e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h53wi")
+alignment = 0
+
+[node name="EventLabel" type="Label" parent="." unique_id=1195862650]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2

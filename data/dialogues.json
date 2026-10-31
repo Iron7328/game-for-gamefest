@@ -1,0 +1,76 @@
+{
+  "start_node": "day1_001",
+  "nodes": [
+    {
+      "id": "day1_001",
+      "speaker": "[ИМЯ ГОВОРЯЩЕГО]",
+      "text": "[ТЕКСТ РЕПЛИКИ]",
+      "choices": [
+        { "text": "[ОТВЕТ 1]", "type": "positive", "next": "day1_002" },
+        { "text": "[ОТВЕТ 2]", "type": "neutral",  "next": "day1_002" },
+        { "text": "[ОТВЕТ 3]", "type": "negative", "next": "day1_003" }
+      ]
+    },
+    {
+      "id": "day1_002",
+      "speaker": "[ИМЯ ГОВОРЯЩЕГО]",
+      "text": "[ТЕКСТ РЕПЛИКИ]",
+      "choices": [
+        { "text": "[ОТВЕТ 1]", "type": "positive", "next": "" },
+        { "text": "[ОТВЕТ 2]", "type": "neutral",  "next": "" },
+        { "text": "[ОТВЕТ 3]", "type": "negative", "next": "" }
+      ]
+    },
+    {
+      "id": "day1_003",
+      "speaker": "[ИМЯ ГОВОРЯЩЕГО]",
+      "text": "[ТЕКСТ РЕПЛИКИ]",
+      "choices": [
+        { "text": "[ОТВЕТ 1]", "type": "positive", "next": "" },
+        { "text": "[ОТВЕТ 2]", "type": "neutral",  "next": "" },
+        { "text": "[ОТВЕТ 3]", "type": "negative", "next": "" }
+      ]
+    },
+    {
+      "id": "event_low_rel_001",
+      "speaker": "[ИМЯ ГОВОРЯЩЕГО]",
+      "text": "[ТЕКСТ РЕПЛИКИ]",
+      "choices": [
+        {
+          "text": "[ОТВЕТ 1]",
+          "type": "positive",
+          "next": "event_low_rel_002",
+          "effects": { "mental_health": -5, "parents_relationship": 15 }
+        },
+        { "text": "[ОТВЕТ 2]", "type": "neutral",  "next": "event_low_rel_002" },
+        { "text": "[ОТВЕТ 3]", "type": "negative", "next": "" }
+      ]
+    },
+    {
+      "id": "event_low_rel_002",
+      "speaker": "[ИМЯ ГОВОРЯЩЕГО]",
+      "text": "[ТЕКСТ РЕПЛИКИ]",
+      "choices": [
+        { "text": "[ОТВЕТ 1]", "type": "positive", "next": "" },
+        { "text": "[ОТВЕТ 2]", "type": "neutral",  "next": "" },
+        { "text": "[ОТВЕТ 3]", "type": "negative", "next": "" }
+      ]
+    },
+    {
+      "id": "ending_kicked_out_001",
+      "speaker": "[ИМЯ ГОВОРЯЩЕГО]",
+      "text": "[ТЕКСТ ФИНАЛА]",
+      "choices": [
+        { "text": "[ОТВЕТ 1]", "type": "neutral", "next": "" }
+      ]
+    },
+    {
+      "id": "ending_breakdown_001",
+      "speaker": "[ИМЯ ГОВОРЯЩЕГО]",
+      "text": "[ТЕКСТ ФИНАЛА]",
+      "choices": [
+        { "text": "[ОТВЕТ 1]", "type": "neutral", "next": "" }
+      ]
+    }
+  ]
+}
