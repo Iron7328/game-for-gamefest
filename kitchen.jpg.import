@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceujk5n6kekln"
-path="res://.godot/imported/gg room2.jpg-1c6e502efe82f767e2ea594677aecccb.ctex"
+uid="uid://kl0ryehmanny"
+path="res://.godot/imported/kitchen.jpg-8ea612dfebbf1454ddd6d8f9783451ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gg room2.jpg"
-dest_files=["res://.godot/imported/gg room2.jpg-1c6e502efe82f767e2ea594677aecccb.ctex"]
+source_file="res://kitchen.jpg"
+dest_files=["res://.godot/imported/kitchen.jpg-8ea612dfebbf1454ddd6d8f9783451ea.ctex"]
 
 [params]
 

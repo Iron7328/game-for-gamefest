@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cr5jfqq05wrxo"]
+
+[ext_resource type="Texture2D" uid="uid://kl0ryehmanny" path="res://kitchen.jpg" id="1_vloss"]
+
+[node name="Node2D" type="Node2D" unique_id=1174076620]
+
+[node name="Kitchen" type="Sprite2D" parent="." unique_id=253485663]
+position = Vector2(958.5, 542)
+scale = Vector2(2.6236413, 2.6280193)
+texture = ExtResource("1_vloss")
