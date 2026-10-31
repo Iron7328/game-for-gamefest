@@ -4,7 +4,7 @@ extends CanvasLayer
 ## (ПКМ по узлу в дереве сцены → Access as Unique Name).
 
 ## Запустить диалог со start_node при загрузке сцены.
-@export var auto_start_dialogue := true
+@export var auto_start_dialogue := false
 ## Длительность анимации изменения шкал в секундах (0 — без анимации).
 @export var bar_tween_time := 0.3
 
@@ -72,6 +72,7 @@ func _unhandled_input(event: InputEvent) -> void:
 # ---------------------------------------------------------------------------
 
 func _on_node_shown(node: Dictionary) -> void:
+	print("СИГНАЛ ДОШЕЛ ДО UI!")
 	var speaker: String = node["speaker"]
 	_speaker_label.text = speaker
 	_speaker_label.visible = not speaker.is_empty()
